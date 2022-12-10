@@ -1,0 +1,116 @@
+body{
+    background-color:  #384047;
+    text-align: left;
+}
+
+
+input {
+  color: white;
+  width: 287px;
+  height: 20px;
+  padding: 5px;
+  margin-top: 3px;
+  border-color: lightgray;
+  border-style: solid;
+  background-color: black;
+}
+
+input[type="radio"]{
+  width: 15px;
+  padding: 0px;
+  margin: 0px;
+  height: 15px;
+}
+
+.wrap{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+.navigater{
+  grid-column: 2;
+}
+
+.contents{
+  grid-column: 2;
+}
+
+.Signup, .Login{
+  background-color: #1d232b;
+  color: white;
+  height: 450px;
+  width: 300px;
+  padding: 20px;
+  padding-bottom: 120px;
+}
+
+.Login {
+  height: 300px;
+}
+
+.ConfirmPage{
+  width: 300px;
+  gird-column: 2;
+  background-color: #1d232b;
+  color: white;
+  padding: 20px;
+
+}
+
+.SubmitBtn {
+  background-color: #0174DF;
+  border-style: none;
+  color: white;
+  width: 300px;
+  height: 35px;
+}
+
+.navBtn {
+  border-style: none;
+  background-color: lightgray;
+  height: 55px;
+  width: 167px;
+  padding: 0px;
+  margin: 0px;
+  color: gray;
+  border-top: 5px solid lightgray;
+}
+
+#navLogin{
+  border-top-color: #0174DF;
+  color: black;
+}
+
+p1{
+  position: relative;
+  bottom: 30px;
+  left: 275px;
+  opacity: 0;
+}
+
+p2{
+  background-color: #0174DF;
+  padding: 5px;
+  border-radius: 5px;
+  position: relative;
+  bottom: 30px;
+  left: 290px;
+  opacity: 0;
+}
+
+#genderWarn{
+  position: relative;
+  top: 2px;
+  left: 150px;
+}
+
+#genderCheck{
+  position: relative;
+  top: 2px;
+  left: 140px;
+}
+
+.ConfirmPage, .Signup{
+  display: none;
+}

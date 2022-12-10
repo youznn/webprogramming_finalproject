@@ -1,0 +1,89 @@
+.wrap {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+
+.logo_area{
+  box-sizing: border-box;
+  position: relative;
+  background: #870A0A;
+  border-radius: 2px;
+}
+
+.left_nav{
+  grid-column: 1;
+  position: relative;
+  background: #F8B229;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  height: 800px;
+}
+
+.contents{
+  grid-column: 2;
+  box-sizing: border-box;
+  position: relative;
+  background: #BCA9A9;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+}
+
+.userInfo{
+  border-style: dashed;
+  background: white;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 20px;
+  height: 200px;
+  width: 150px;
+}
+
+#info_name{
+  background-color: #F8B229;
+  padding: 5px 10px 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+  color: white;
+
+}
+
+button{
+  border-style: solid;
+  border-color: white;
+  border-radius: 20px;
+  font-size: 20px;
+  color: white;
+  padding: 10px;
+  margin: 20px;
+  height: 50px;
+  width: 160px;
+  background-color: #870A0A;
+}
+
+button:hover{
+  background-color: #E9CCCC;
+  color: black;
+}
+
+#logoutbtn{
+  margin-top: 50px;
+  border-style: none;
+  border-radius: 20px;
+  font-size: 15px;
+  padding: 20px;
+  height: 25px;
+  width: 130px;
+  background-color: #E4D6BB;
+  font-weight: bold;
+}
+
+#logoutbtn:hover{
+  background-color: #231010;
+  color: white;
+}
+
+#christmas{
+  color: white;
+  font-size: 40px;
+
+}
