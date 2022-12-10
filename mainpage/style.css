@@ -1,3 +1,6 @@
+body{
+  margin: 30px;
+}
 .wrap {
   display: grid;
   grid-template-columns: 1fr 4fr;
@@ -16,7 +19,7 @@
   background: #F8B229;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 2px;
-  height: 800px;
+  height: 100s0px;
 }
 
 .contents{
@@ -73,17 +76,59 @@ button:hover{
   padding: 20px;
   height: 25px;
   width: 130px;
-  background-color: #E4D6BB;
+  background-color: #231010;
+  color: white;
+
   font-weight: bold;
 }
 
 #logoutbtn:hover{
-  background-color: #231010;
-  color: white;
+  background-color: #E4D6BB;
 }
 
 #christmas{
   color: white;
   font-size: 40px;
+
+}
+
+#contect{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.messagearea{
+  position: relative;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.composeWindow{
+  display: none;
+
+}
+
+.inboxWindow{
+
+
+}
+
+.inbox_wrap{
+  display: grid;
+  grid-template-columns:  1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+
+}
+.inbox_src{
+  height: 250px;
+  width: 250px;
+  background-color: white;
+  margin: 20px;
+  border-style: solid;
+  border-color: #870A0A;
+  border-radius: 50px;
+}
+
+.outboxWindow{
 
 }
