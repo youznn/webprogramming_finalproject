@@ -1,9 +1,13 @@
 body{
+  font-family: 'Nanum Gothic', sans-serif;
   margin: 30px;
+  background-color: #E9CCCC;
+  word-wrap: break-word;
 }
 
 h2{
-  font-size: 30px;
+  font-family: 'Nanum Pen Script', cursive;
+  font-size: 50px;
   font-weight: bold;
   border-radius: 10px;
   border-style: solid;
@@ -13,14 +17,40 @@ h2{
   width: 300px;
   height: 50px;
 }
+
+header{
+  text-align: right;
+  background-color: #E9CCCC;
+  padding: 15px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+a{
+  text-align: right;
+  padding-left: 20px;
+}
+
+a:link{
+  padding: 20px;
+  color: black;
+  text-decoration: none;
+}
+
+a:visited{
+  color: black;
+  text-decoration: none;
+}
 .wrap {
   display: grid;
   grid-template-columns: 1fr 4fr;
 }
 
 .logo_area{
+  font-family: 'Nanum Pen Script', cursive;
   grid-column: 1/span 2;
   box-sizing: border-box;
+  font-weight: bold;
   position: relative;
   background: #870A0A;
   border-radius: 2px;
@@ -62,14 +92,20 @@ h2{
   margin-top: 20px;
   border-radius: 5px;
   color: white;
+  font-weight: bold;
+}
 
+#info_message{
+  font-weight: bold;
 }
 
 button{
+  cursor: pointer;
+  font-family: 'Nanum Pen Script', cursive;
   border-style: solid;
   border-color: white;
   border-radius: 20px;
-  font-size: 20px;
+  font-size: 30px;
   color: white;
   padding: 10px;
   margin: 20px;
@@ -84,6 +120,7 @@ button:hover{
 }
 
 #logoutbtn{
+  cursor: pointer;
   margin-top: 50px;
   border-style: none;
   border-radius: 20px;
@@ -135,8 +172,11 @@ button:hover{
 
 }
 .inbox_src, .outbox_src{
-  height: 250px;
-  width: 250px;
+  font-family: 'Nanum Pen Script', cursive;
+  font-size: 30px;
+  padding: 10px;
+  height: 230px;
+  width: 230px;
   background-color: white;
   margin: 20px;
   border-style: solid;

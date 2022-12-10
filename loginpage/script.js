@@ -75,22 +75,6 @@ $("#firstname").keyup(function(){
   }
 });
 
-$("#lastname").keyup(function(){
-  if(!(checkEng.test($(this).val()))){
-    $(this).css("border-color","red");
-    $("#lastnameCheck").css("opacity","0");
-    $("#lastnameWarn").css("opacity","1");
-    checkall[1] = 0;
-    gender = "male";
-  }
-  else{
-    $(this).css("border-color","lightgray");
-    $("#lastnameCheck").css("opacity","1");
-    $("#lastnameWarn").css("opacity","0");
-    checkall[1] = 1;
-    gender = "female";
-  }
-});
 
 $("#email").keyup(function(){
   if(!(checkEmail.test($(this).val()))){

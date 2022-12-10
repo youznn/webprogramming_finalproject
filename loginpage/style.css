@@ -1,5 +1,5 @@
 body{
-    background-color:  #384047;
+    background-color:  #E9CCCC;
     text-align: left;
 }
 
@@ -37,7 +37,7 @@ input[type="radio"]{
 }
 
 .Signup, .Login{
-  background-color: #1d232b;
+  background-color: #165B33;
   color: white;
   height: 450px;
   width: 300px;
@@ -59,9 +59,9 @@ input[type="radio"]{
 }
 
 .SubmitBtn {
-  background-color: #0174DF;
+  background-color: #F8B229;
   border-style: none;
-  color: white;
+  color: black;
   width: 300px;
   height: 35px;
 }
