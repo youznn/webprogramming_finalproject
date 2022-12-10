@@ -1,31 +1,33 @@
 $(document).ready(function(){
 
+  $(document).snowfall({deviceorientation : true, round : true, minSize: 1, maxSize:8,  flakeCount : 250});
+
+
   //Check the inputs are valid.
   let checkEng = /^[A-Z]+[a-z]+$/;
   let checkNum = /^[0-9]+$/;
   let checkEmail = /^[a-z0-9\.\-_]+@([a-z0-9\-]+\.)+[a-z]{2,6}$/;
   let checkpassword =  /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{6,}/;
-
+  let checkId = /^[a-zA-z0-9]{4,10}$/
   //0 if each item does not meet the condition, 1 if it does
-  let checkall=[0,0,0,0,0,0];
+  let checkall=[0,0,0];
 
   //store gender value
-  let gender;
 
 
 //navigater - login click -> change border-top color, toggle page
 $("#navLogin").click(function(){
-  $(this).css({"border-top-color":"#0174DF", "color":"black"});
-  $("#navSignUp").css({"border-top-color": "lightgray", "color":"gray"});
+  $(this).css({"color":"white", "background-color": "#163B33"});
+  $("#navSignUp").css({"color":"gray", "background-color":"#030807"});
   $(".Login").css("display","block");
   $(".Signup").css("display","none");
   $(".ConfirmPage").css("display","none");
 });
 
-
+$("#navSignUp").css("background-color","#030807")
 $("#navSignUp").click(function(){
-  $(this).css({"border-top-color":"#0174DF", "color":"black"});
-  $("#navLogin").css({"border-top-color": "lightgray", "color":"gray"});
+  $(this).css({"color":"white", "background-color": "#163B33"});
+  $("#navLogin").css({"color":"gray" , "background-color":"#030807"});
   $(".Login").css("display","none");
   $(".Signup").css("display","block");
   $(".ConfirmPage").css("display","none");
@@ -33,7 +35,7 @@ $("#navSignUp").click(function(){
 
 
 //change the border color to red and show/hide the warning/check messages
-$("#loginemail").keyup(function(){ //input field
+$("#loginID").keyup(function(){ //input field
   if(!(checkEmail.test($(this).val()))){
     $(this).css("border-color","red");
     $("#loginEmailCheck").css("opacity","0");
@@ -60,81 +62,62 @@ $("#loginpassword").keyup(function(){
   }
 });
 
-$("#firstname").keyup(function(){
-  if(!(checkEng.test($(this).val()))){
-    $(this).css("border-color","red");
-    $("#firstnameCheck").css("opacity","0");
-    $("#firstnameWarn").css("opacity","1");
+$("#nickname").keyup(function(){
+  if($("#nickname").val().length > 10){
+    $(this).css("background-color","#F8E0E0");
+    $("#nick_warn").css("color","red");
     checkall[0] = 0;
   }
   else{
-    $(this).css("border-color","lightgray");
-    $("#firstnameCheck").css("opacity","1");
-    $("#firstnameWarn").css("opacity","0");
+    $(this).css("background-color","white");
+    $("#nick_warn").css("color","white");
     checkall[0] = 1;
   }
 });
 
-
-$("#email").keyup(function(){
-  if(!(checkEmail.test($(this).val()))){
-    $(this).css("border-color","red");
-    $("#emailCheck").css("opacity","0");
-    $("#emailWarn").css("opacity","1");
-    checkall[2] = 0;
+$("#ID").keyup(function(){
+  if(!(checkId.test($(this).val()))){
+    $(this).css("background-color","#F8E0E0");
+    $("#id_warn").css("color","red");
+    checkall[1] = 0;
   }
   else{
-    $(this).css("border-color","lightgray");
-    $("#emailCheck").css("opacity","1");
-    $("#emailWarn").css("opacity","0");
-    checkall[2] = 1;
+    $(this).css("background-color","white");
+    $("#id_warn").css("color","white");
+    checkall[1] = 1;
   }
 });
 
+
+
 $("#password").keyup(function(){
   if(!(checkpassword.test($(this).val()))){
-    $(this).css("border-color","red");
-    $("#passwordCheck").css("opacity","0");
-    $("#passwordWarn").css("opacity","1");
-    checkall[3] = 0;
+    $(this).css("background-color","#F8E0E0");
+    $("#pw_warn").css("color","red");
+    checkall[2] = 0;
   }
   else{
-    $(this).css("border-color","lightgray");
-    $("#passwordCheck").css("opacity","1");
-    $("#passwordWarn").css("opacity","0");
-    checkall[3] = 1;
+    $(this).css("background-color","white");
+    $("#pw_warn").css("color","white");
+    checkall[2] = 1;
   }
 });
 
 $("#confirmpassword").keyup(function(){
   let mypassword = $("#password").val();
   if(mypassword != $(this).val()){
-    $(this).css("border-color","red");
-    $("#conpassCheck").css("opacity","0");
-    $("#conpasswordWarn").css("opacity","1");
-    checkall[4] = 0;
+    $(this).css("background-color","#F8E0E0");
+    $("#cpw_warn").css("color","red");
+    checkall[3] = 0;
     }
   else{
-    $(this).css("border-color","lightgray");
-    $("#conpassCheck").css("opacity","1");
-    $("#conpasswordWarn").css("opacity","0");
-    checkall[4] = 1;
+    $(this).css("background-color","white");
+    $("#cpw_warn").css("color","white");
+    checkall[3] = 1;
   }
 });
 
 
-//radio button setting
-$("#male").click(function(){
-  $("#genderCheck").css("opacity","1");
-  $("#genderWarn").css("opacity","0");
-  checkall[5] = 1;
-});
-
-$("#female").click(function(){
-  $("#genderCheck").css("opacity","1");
-  $("#genderWarn").css("opacity","0");
-  checkall[5] = 1;
-});
 
 
 //if the user clicks the sign up button,
@@ -142,37 +125,29 @@ $("#subSignUpBtn").click(function(){
 
   //If there are invalid inputs
   if (checkall[0] == 0){ //first name is invalid
-    $("#firstname").css("border-color","red");
-    $("#firstnameCheck").css("opacity","0");
-    $("#firstnameWarn").css("opacity","1");
+    $("#nickname").css("background-color","#F8E0E0");
+    $("#nick_warn").css("color","red");
   }
   if (checkall[1] == 0){ //last name is invalid
-    $("#lastname").css("border-color","red");
-    $("#lastnameCheck").css("opacity","0");
-    $("#lastnameWarn").css("opacity","1");
+    $("#ID").css("background-color","#F8E0E0");
+    $("#id_warn").css("color","red");
   }
   if (checkall[2] == 0){ //email is invalid
-    $("#email").css("border-color","red");
-    $("#emailCheck").css("opacity","0");
-    $("#emailWarn").css("opacity","1");
+    $("#password").css("background-color","#F8E0E0");
+    $("#pw_warn").css("color","red");
   }
   if(checkall[3] == 0){ //password is invalid
-    $("#password").css("border-color","red");
-    $("#passwordCheck").css("opacity","0");
-    $("#passwordWarn").css("opacity","1");
+    $("#confirmpassword").css("background-color","#F8E0E0");
+    $("#cpw_warn").css("color","red");
   }
-  if(checkall[4] == 0){ //confirmpassword is invalid
-    $("#confirmpassword").css("border-color","red");
-    $("#conpassCheck").css("opacity","0");
-    $("#conpasswordWarn").css("opacity","1");
-  }
-  if(checkall[5] == 0){
-    $("#genderWarn").css("opacity","1");
-  }
+
+
+
+
+//여기서부터는 지난 과제에 쓰인거,,
 
   //If all the conditions are met
   else{
-
     //store the values at localstorage
     localStorage.setItem("first",$("#firstname").val());
     localStorage.setItem("last",$("#lastname").val());

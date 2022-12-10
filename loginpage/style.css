@@ -1,18 +1,22 @@
 body{
+  color: white;
+    font-family: 'Nanum Pen Script', cursive;
     background-color:  #E9CCCC;
     text-align: left;
+    font-size: 20px;
 }
 
 
 input {
-  color: white;
+  outline: none;
   width: 287px;
-  height: 20px;
+  height: 40px;
   padding: 5px;
   margin-top: 3px;
-  border-color: lightgray;
-  border-style: solid;
-  background-color: black;
+  border-color: #870A0A;
+  border-radius: 10px;
+  border-style: dashed;
+  background-color: white;
 }
 
 input[type="radio"]{
@@ -37,9 +41,8 @@ input[type="radio"]{
 }
 
 .Signup, .Login{
-  background-color: #165B33;
-  color: white;
-  height: 450px;
+  background-color: #163B33;
+  height: 650px;
   width: 300px;
   padding: 20px;
   padding-bottom: 120px;
@@ -59,27 +62,36 @@ input[type="radio"]{
 }
 
 .SubmitBtn {
-  background-color: #F8B229;
-  border-style: none;
+  text-align: center;
+  border-radius: 20px;
+  font-family: 'Nanum Pen Script', cursive;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #E4D6BB;
+  border-style: solid;
   color: black;
   width: 300px;
   height: 35px;
 }
 
+.SubmitBtn:hover{
+  background-color: #F8B229;
+}
+
 .navBtn {
+  cursor: pointer;
+  border-radius: 0px;
   border-style: none;
-  background-color: lightgray;
+  background-color: #163B33;
   height: 55px;
   width: 167px;
   padding: 0px;
   margin: 0px;
   color: gray;
-  border-top: 5px solid lightgray;
 }
 
 #navLogin{
-  border-top-color: #0174DF;
-  color: black;
+  color: white;
 }
 
 p1{
@@ -97,6 +109,11 @@ p2{
   bottom: 30px;
   left: 290px;
   opacity: 0;
+}
+
+p3{
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 13px;
 }
 
 #genderWarn{
