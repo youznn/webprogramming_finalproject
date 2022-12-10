@@ -36,29 +36,24 @@ $("#navSignUp").click(function(){
 
 //change the border color to red and show/hide the warning/check messages
 $("#loginID").keyup(function(){ //input field
-  if(!(checkEmail.test($(this).val()))){
-    $(this).css("border-color","red");
-    $("#loginEmailCheck").css("opacity","0");
-    $("#loginEmailWarn").css("opacity","1");
+  if(!(checkId.test($(this).val()))){
+    $(this).css("background-color","#F8E0E0");
+    $("#logId_warn").css({"display": "block"});
   }
   else{
-    $(this).css("border-color","lightgray");
-    $("#loginEmailCheck").css("opacity","1");
-    $("#loginEmailWarn").css("opacity","0");
+    $(this).css("background-color","white");
+    $("#logId_warn").css({"display": "none"});
   }
 });
 
 //Logic as above
 $("#loginpassword").keyup(function(){
   if(($(this).val() == "")){
-    $(this).css("border-color","red");
-    $("#loginPasswordCheck").css("opacity","0");
-    $("#loginPassWarn").css("opacity","1");
+    $(this).css("background-color","#F8E0E0");
+    $("#logPw_warn").css({"display": "block"});
   }
   else{
-    $(this).css("border-color","lightgray");
-    $("#loginPasswordCheck").css("opacity","1");
-    $("#loginPassWarn").css("opacity","0");
+      $("#logPw_warn").css({"display": "none"});
   }
 });
 
@@ -136,7 +131,7 @@ $("#subSignUpBtn").click(function(){
     $("#password").css("background-color","#F8E0E0");
     $("#pw_warn").css("color","red");
   }
-  if(checkall[3] == 0){ //password is invalid
+  if(checkall[3] == 0 || !$("confirmpassword").val()){ //password is invalid
     $("#confirmpassword").css("background-color","#F8E0E0");
     $("#cpw_warn").css("color","red");
   }

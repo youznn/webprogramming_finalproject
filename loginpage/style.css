@@ -52,6 +52,10 @@ input[type="radio"]{
   height: 300px;
 }
 
+.loginWarn{
+  color: red;
+  display: none;
+}
 .ConfirmPage{
   width: 300px;
   gird-column: 2;
