@@ -1,16 +1,30 @@
 body{
   margin: 30px;
 }
+
+h2{
+  font-size: 30px;
+  font-weight: bold;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: white;
+  color: white;
+  background-color: #F8B229;
+  width: 300px;
+  height: 50px;
+}
 .wrap {
   display: grid;
   grid-template-columns: 1fr 4fr;
 }
 
 .logo_area{
+  grid-column: 1/span 2;
   box-sizing: border-box;
   position: relative;
   background: #870A0A;
   border-radius: 2px;
+  padding: 20px;
 }
 
 .left_nav{
@@ -26,7 +40,7 @@ body{
   grid-column: 2;
   box-sizing: border-box;
   position: relative;
-  background: #BCA9A9;
+  background: #165B33;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 2px;
 }
@@ -39,6 +53,7 @@ body{
   border-radius: 20px;
   height: 200px;
   width: 150px;
+  border-color: #870A0A;
 }
 
 #info_name{
@@ -109,7 +124,7 @@ button:hover{
 }
 
 .inboxWindow{
-
+  display: none;
 
 }
 
@@ -119,7 +134,7 @@ button:hover{
   grid-template-rows: 1fr 1fr 1fr;
 
 }
-.inbox_src{
+.inbox_src, .outbox_src{
   height: 250px;
   width: 250px;
   background-color: white;
@@ -130,5 +145,12 @@ button:hover{
 }
 
 .outboxWindow{
+
+}
+
+.outbox_wrap{
+  display: grid;
+  grid-template-columns:  1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
 
 }
