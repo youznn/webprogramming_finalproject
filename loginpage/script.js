@@ -137,8 +137,6 @@ $("#subSignUpBtn").click(function(){
   }
 
 
-
-
 //여기서부터는 지난 과제에 쓰인거,,
 
   //If all the conditions are met
