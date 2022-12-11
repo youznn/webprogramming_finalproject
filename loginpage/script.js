@@ -160,15 +160,12 @@ $("#subSignUpBtn").click(function(){
     $("#nickname").css("background-color","#F8E0E0");
     $("#nick_warn").css("color","red");
   }
-  if (checkall[1] == 0){ //last name is invalid
-    $("#ID").css("background-color","#F8E0E0");
-    $("#id_warn").css("color","red");
-  }
-  if (checkall[2] == 0){ //email is invalid
+
+  if (checkall[1] == 0){ //email is invalid
     $("#password").css("background-color","#F8E0E0");
     $("#pw_warn").css("color","red");
   }
-  if(checkall[3] == 0){ //password is invalid
+  if(checkall[2] == 0){ //password is invalid
     $("#confirmpassword").css("background-color","#F8E0E0");
     $("#cpw_warn").css("color","red");
   }
@@ -209,8 +206,7 @@ $("#subLoginBtn").click(function(){
     //$(".Login").css("display","none");
     //$(".ConfirmPage").css("display","block");
     //$("#confirmMessage").text("You are Logged in");
-    
-    $("#info_name").val($("#loginnickname").val());
+    localStorage.setItem("current", $("#loginnickname").val());
     location.href = "../mainpage/index.html";
   }
 });
