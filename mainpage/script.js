@@ -1,9 +1,10 @@
 $(document).ready(function(){
   
   var sender = (localStorage.getItem("current"));
-  var len_totalmessage = 5;
-  var inboxmessages = ["안녕지수야처음봣을때부터널좋아했어","안녕지수야메리크리스마스","웹프실종강하고싶어요"];
-  var outboxmessages = ["언닝 안녕 나 지수얌", "헐 우리 곧 종강이넹", "언니 메리크리스마스!", "타메르 교수님 최고최고"];
+  alert(sender);
+  var len_totalmessage = JSON.parse(localStorage.getItem("to"+sender)).length;
+  var inboxmessages = JSON.parse(localStorage.getItem("to"+sender));
+  var outboxmessages = JSON.parse(localStorage.getItem("from"+sender));
   $("#info_name").text(sender);
   $(document).snowfall({deviceorientation : true, round : true, minSize: 1, maxSize:8,  flakeCount : 250});
 
@@ -57,14 +58,26 @@ $(document).ready(function(){
     //localStorage.setItem(sender+"->"+$("#recipient").val(), $(".messagearea").val());
 
     //Sender sent message to recipient at least once.
-    if (localStorage.getItem(sender+"->"+$("#recipient").val())) {
-      var messageArr = JSON.parse(localStorage.getItem(sender+"->"+$("#recipient").val()));
+    if (localStorage.getItem("to"+$("#recipient").val())) {
+      var messageArr = JSON.parse(localStorage.getItem("to"+$("#recipient").val()));
       messageArr.push($(".messagearea").val());
-      localStorage.setItem(sender+"->"+$("#recipient").val(), JSON.stringify(messageArr));
-    } else { //sending message first time.
-      alert(2);
+      localStorage.setItem("to"+$("#recipient").val(), JSON.stringify(messageArr));
+    }
+
+    else {
       var Arr = [$(".messagearea").val()];
-      localStorage.setItem(sender+"->"+$("#recipient").val(), JSON.stringify(Arr));
+      localStorage.setItem("to"+$("#recipient").val(), JSON.stringify(Arr));
+    }
+    
+    if (localStorage.getItem("from"+sender)) {
+      var messageArr = JSON.parse(localStorage.getItem("from"+sender));
+      messageArr.push($(".messagearea").val());
+      localStorage.setItem("from"+sender, JSON.stringify(messageArr));
+    }
+    
+    else { //sending message first time.
+      var Arr = [$(".messagearea").val()];
+      localStorage.setItem("from"+sender, JSON.stringify(Arr));
     }
 
   })
