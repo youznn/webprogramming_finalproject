@@ -5,6 +5,12 @@ body{
   word-wrap: break-word;
 }
 
+.wrap{
+  border-color: white;
+  border-style: dashed;
+
+}
+
 h2{
   font-family: 'Nanum Pen Script', cursive;
   font-size: 50px;
@@ -140,6 +146,8 @@ button:hover{
 #christmas{
   color: white;
   font-size: 40px;
+  text-shadow: 2px 2px 2px #000;
+  text
 
 }
 

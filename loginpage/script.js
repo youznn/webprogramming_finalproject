@@ -4,7 +4,7 @@ $(document).ready(function(){
 
 
   //Check the inputs are valid.
-  let checkEng = /^[A-Z]+[a-z]+$/;
+  let checkEng = /^[a-zA-z0-9]{1,10}$/;
   let checkNum = /^[0-9]+$/;
   let checkEmail = /^[a-z0-9\.\-_]+@([a-z0-9\-]+\.)+[a-z]{2,6}$/;
   let checkpassword =  /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{6,}/;
@@ -58,7 +58,7 @@ $("#loginpassword").keyup(function(){
 });
 
 $("#nickname").keyup(function(){
-  if($("#nickname").val().length > 10){
+  if(!(checkEng.test($(this).val()))){
     $(this).css("background-color","#F8E0E0");
     $("#nick_warn").css("color","red");
     checkall[0] = 0;
