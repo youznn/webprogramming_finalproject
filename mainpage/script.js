@@ -1,11 +1,10 @@
 $(document).ready(function(){
   
-  var sender = (localStorage.getItem("current"));
-  alert(sender);
-  var len_totalmessage = JSON.parse(localStorage.getItem("to"+sender)).length;
-  var inboxmessages = JSON.parse(localStorage.getItem("to"+sender));
-  var outboxmessages = JSON.parse(localStorage.getItem("from"+sender));
-  $("#info_name").text(sender);
+  var sender = (localStorage.getItem("current")) ? localStorage.getItem("current") : "login/signup plz!";
+
+  var len_totalmessage = localStorage.getItem("to"+sender) ? JSON.parse(localStorage.getItem("to"+sender)).length : 0;
+  var inboxmessages = localStorage.getItem("to"+sender) ? JSON.parse(localStorage.getItem("to"+sender)) : [];
+  var outboxmessages = localStorage.getItem("from"+sender) ? JSON.parse(localStorage.getItem("from"+sender)) : [];
   $(document).snowfall({deviceorientation : true, round : true, minSize: 1, maxSize:8,  flakeCount : 250});
 
 
@@ -27,8 +26,14 @@ $(document).ready(function(){
     $(".outboxWindow").fadeIn();
   })
 
+  $("#logoutbtn").click(function() {
+    localStorage.removeItem("current");
+    $("#info_name").text("login/signup plz!");
+    $("#info_message").text("Total messages: " + 0);
+  })
 
-  $("#info_name").text(localStorage.getItem("current")); //info_name setting
+
+  $("#info_name").text(sender); //info_name setting
   $("#info_message").text("Total messages: " + len_totalmessage); //info_message setting
 
   //inbox messages setting
@@ -52,11 +57,17 @@ $(document).ready(function(){
     }
   })
 
+  $("#info_name").on("propertychange change keyup paste input", function (){
+    if ($(this).val() === "login/signup plz!") //this means Logout.
+      $("#sendBtn").attr('disabled', true);
+    else {
+      $("#sendBtn").attr('disabled', false);
+    }
+  })
+
 
   $("#sendBtn").click(function(){
     
-    //localStorage.setItem(sender+"->"+$("#recipient").val(), $(".messagearea").val());
-
     //Sender sent message to recipient at least once.
     if (localStorage.getItem("to"+$("#recipient").val())) {
       var messageArr = JSON.parse(localStorage.getItem("to"+$("#recipient").val()));
@@ -79,6 +90,16 @@ $(document).ready(function(){
       var Arr = [$(".messagearea").val()];
       localStorage.setItem("from"+sender, JSON.stringify(Arr));
     }
+
+    $(".composeWindow").css("display", "none");
+    $(".inbox_complete").css("display", "block");
+
+    setTimeout(function() {
+      $(".inbox_complete").css("display", "none");
+      $(".composeWindow").css("display", "block");
+
+
+    }, 5000)
 
   })
 

@@ -270,4 +270,9 @@ button:hover {
   grid-template-rows: 1fr 1fr 1fr;
 }
 
+
+.inbox_complete {
+  display: none;
+}
+
 footer {}

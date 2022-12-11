@@ -173,7 +173,7 @@ $("#subSignUpBtn").click(function(){
 
 
   //If all the conditions are met
-  else{
+  if (checkall.toString() == [1,1,1].toString()){
     //store the values at localstorage
     localStorage.setItem($("#nickname").val(), $("#password").val());
     $(".Signup").css("display","none");
