@@ -192,6 +192,11 @@ button:hover {
   background-color: #E4D6BB;
 }
 
+#check_nick {
+  display: none;
+  color: red;
+}
+
 #recipient {
   font-family: 'Nanum Pen Script', cursive;
   height: 30px;
