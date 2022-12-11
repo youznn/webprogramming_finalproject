@@ -24,10 +24,20 @@ h2{
 
 header{
   text-align: right;
-  background-color: white;
+  background-color: #6F0101;
   padding: 15px;
   font-size: 15px;
   font-weight: bold;
+}
+.head{
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  border-bottom-style: dashed;
+  border-bottom-color: white;
+}
+
+#login_h{
+  color: white;
 }
 
 a{
@@ -64,9 +74,9 @@ a:visited{
   grid-column: 1;
   position: relative;
   background: #F8B229;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 2px;
   padding: 30px;
+  border-top-color: white;
+  border-top-style: dashed;
 }
 
 .contents{
@@ -74,8 +84,8 @@ a:visited{
   box-sizing: border-box;
   position: relative;
   background: #163B33;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 2px;
+  border-top-color: white;
+  border-top-style: dashed;
 }
 
 .userInfo{
