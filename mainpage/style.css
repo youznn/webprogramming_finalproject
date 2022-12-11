@@ -1,0 +1,274 @@
+body {
+  font-family: 'Nanum Gothic', sans-serif;
+  margin: 30px;
+  background-image: url("../assets/seamless-g1a01173e4_1280.png");
+  word-wrap: break-word;
+}
+
+.wrap {}
+
+h2 {
+  font-family: 'Nanum Pen Script', cursive;
+  font-size: 50px;
+  font-weight: bold;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: white;
+  color: black;
+  background-color: #E4D6BB;
+  width: 300px;
+  height: 50px;
+}
+
+h3 {
+  font-family: 'Nanum Pen Script', cursive;
+  font-size: 50px;
+  font-weight: bold;
+  color: white;
+}
+
+header {
+  text-align: right;
+  background-color: #6F0101;
+  padding: 15px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.head {
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  border-bottom-style: dashed;
+  border-bottom-color: white;
+}
+
+#login_h {
+  color: white;
+}
+
+a {
+  text-align: right;
+  padding-left: 20px;
+}
+
+a:link {
+  padding: 20px;
+  color: black;
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+.wrap {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+
+.logo_area {
+  grid-column: 1/span 2;
+  box-sizing: border-box;
+  font-weight: bold;
+  position: relative;
+  background: #6F0101;
+  border-radius: 2px;
+  padding: 20px;
+}
+
+.left_nav {
+  grid-column: 1;
+  position: relative;
+  background: #E4D6BB;
+  padding: 30px;
+  border-top-color: white;
+  border-top-style: dashed;
+}
+
+.contents {
+  grid-column: 2;
+  box-sizing: border-box;
+  position: relative;
+  background: #163B33;
+  border-top-color: white;
+  border-top-style: dashed;
+}
+
+.userInfo {
+  border-style: solid;
+  background: white;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 20px;
+  height: 200px;
+  width: 150px;
+  border-color: #870A0A;
+}
+
+#info_name {
+  background-color: #E4D6BB;
+  padding: 5px 10px 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+  color: white;
+  text-shadow: 1px 1px 1px #000;
+  font-weight: bold;
+}
+
+#info_message {
+  font-weight: bold;
+}
+
+button {
+  cursor: pointer;
+  font-family: 'Nanum Pen Script', cursive;
+  border-style: dashed;
+  border-color: white;
+  border-radius: 20px;
+  font-size: 30px;
+  color: white;
+  padding: 10px;
+  margin: 20px;
+  height: 50px;
+  width: 160px;
+  background-color: #870A0A;
+}
+
+button:hover {
+  background-color: #E9CCCC;
+  color: black;
+}
+
+#logoutbtn {
+  cursor: pointer;
+  margin-top: 50px;
+  border-style: dashed;
+  border-radius: 20px;
+  border-color: white;
+  font-size: 15px;
+  padding: 20px;
+  height: 25px;
+  width: 130px;
+  background-color: #231010;
+  color: white;
+  font-weight: bold;
+}
+
+#logoutbtn:hover {
+  background-color: #E4D6BB;
+}
+
+#christmas {
+  color: white;
+  font-size: 40px;
+  text-shadow: 2px 2px 2px #000;
+  text
+}
+
+#contect {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#enter_nick {
+  font-weight: bold;
+  color: white;
+}
+
+#searchBtn {
+  font-family: 'Nanum Gothic', sans-serif;
+  background-color: #870A0A;
+  font-size: 15px;
+  border: none;
+  border-color: white;
+  border-radius: 10px;
+  height: 40px;
+  width: 80px;
+  color: white;
+}
+
+#searchBtn:hover {
+  background-color: #E4D6BB;
+}
+
+#check_nick {
+  display: none;
+  color: red;
+}
+
+#recipient {
+  font-family: 'Nanum Pen Script', cursive;
+  height: 30px;
+  border-radius: 10px;
+  border-color: white;
+  border-style: solid;
+  font-size: 20px;
+}
+
+.messagearea {
+  font-family: 'Nanum Pen Script', cursive;
+  position: relative;
+  font-size: 40px;
+  padding: 20px;
+  height: 300px;
+  width: 300px;
+  border-radius: 20px;
+}
+
+#sendBtn {
+  background-color: #870A0A;
+  border-style: dashed;
+  font-weight: bold;
+  font-size: 20px;
+  border-color: white;
+  border-radius: 5px;
+  height: 40px;
+  width: 80px;
+  color: white;
+  margin: 20px;
+}
+
+#sendBtn:hover {
+  background-color: #E4D6BB;
+}
+
+.composeWindow {}
+
+.inboxWindow {
+  display: none;
+}
+
+.inbox_wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  place-items: center;
+}
+
+.inbox_src, .outbox_src {
+  position: relative;
+  font-family: 'Nanum Pen Script', cursive;
+  font-size: 30px;
+  padding: 10px;
+  height: 230px;
+  width: 230px;
+  background-color: white;
+  margin: 20px;
+  border-style: solid;
+  border-color: #870A0A;
+  border-radius: 50px;
+  text-align: center;
+}
+
+.outboxWindow {
+  display: none;
+}
+
+.outbox_wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+footer {}

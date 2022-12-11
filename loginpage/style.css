@@ -1,0 +1,138 @@
+body{
+  color: white;
+    font-family: 'Nanum Pen Script', cursive;
+    background-color:  #E9CCCC;
+    text-align: left;
+    font-size: 20px;
+    background-image: url("../assets/seamless-g1a01173e4_1280.png");
+}
+
+
+input {
+  outline: none;
+  width: 287px;
+  height: 40px;
+  padding: 5px;
+  margin-top: 3px;
+  border-color: #870A0A;
+  border-radius: 10px;
+  border-style: dashed;
+  background-color: white;
+}
+
+input[type="radio"]{
+  width: 15px;
+  padding: 0px;
+  margin: 0px;
+  height: 15px;
+}
+
+.wrap{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+.navigater{
+  grid-column: 2;
+}
+
+.contents{
+  grid-column: 2;
+}
+
+.Signup, .Login{
+  background-color: #163B33;
+  height: 550px;
+  width: 300px;
+  padding: 20px;
+  padding-bottom: 120px;
+}
+
+.Login {
+  height: 300px;
+}
+
+.loginWarn{
+  color: red;
+  display: none;
+}
+.ConfirmPage{
+  width: 300px;
+  gird-column: 2;
+  background-color: #1d232b;
+  color: white;
+  padding: 20px;
+
+}
+
+.SubmitBtn {
+  text-align: center;
+  border-radius: 20px;
+  font-family: 'Nanum Pen Script', cursive;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #E4D6BB;
+  border-style: solid;
+  color: black;
+  width: 300px;
+  height: 35px;
+}
+
+.SubmitBtn:hover{
+  background-color: #F8B229;
+}
+
+.navBtn {
+  cursor: pointer;
+  border-radius: 0px;
+  border-style: none;
+  background-color: #163B33;
+  height: 55px;
+  width: 167px;
+  padding: 0px;
+  margin: 0px;
+  color: gray;
+}
+
+#navLogin{
+  color: white;
+}
+
+p1{
+  position: relative;
+  bottom: 30px;
+  left: 275px;
+  opacity: 0;
+}
+
+p2{
+  background-color: #0174DF;
+  padding: 5px;
+  border-radius: 5px;
+  position: relative;
+  bottom: 30px;
+  left: 290px;
+  opacity: 0;
+}
+
+p3{
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 13px;
+}
+
+#genderWarn{
+  position: relative;
+  top: 2px;
+  left: 150px;
+}
+
+#genderCheck{
+  position: relative;
+  top: 2px;
+  left: 140px;
+}
+
+.ConfirmPage, .Signup{
+  display: none;
+}
