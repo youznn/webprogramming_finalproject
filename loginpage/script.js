@@ -139,16 +139,16 @@ $("#subSignUpBtn").click(function(){
 
 
 
+
+
 //여기서부터는 지난 과제에 쓰인거,,
 
   //If all the conditions are met
   else{
     //store the values at localstorage
-    localStorage.setItem("first",$("#firstname").val());
-    localStorage.setItem("last",$("#lastname").val());
-    localStorage.setItem("email",$("#email").val());
-    localStorage.setItem("password",$("#password").val());
-    localStorage.setItem("gender",gender);
+    var userInform = [$("#ID").val(), $("#password").val()];
+    localStorage.setItem($("#nickname").val(), JSON.stringify(userInform))
+
     $(".Signup").css("display","none");
     $(".ConfirmPage").css("display","block");
     $("#confirmMessage").text("You are Signed Up");
