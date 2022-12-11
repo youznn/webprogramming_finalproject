@@ -10,7 +10,7 @@ $(document).ready(function(){
   let checkpassword =  /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{6,}/;
   let checkId = /^[a-zA-z0-9]{4,10}$/
   //0 if each item does not meet the condition, 1 if it does
-  let checkall=[0,0,0];
+  let checkall=[0,0,0,0];
 
   //store gender value
 
@@ -19,7 +19,7 @@ $(document).ready(function(){
 $("#navLogin").click(function(){
   $(this).css({"color":"white", "background-color": "#163B33"});
   $("#navSignUp").css({"color":"gray", "background-color":"#030807"});
-  $(".Login").css("display","block");
+  $(".Login").fadeIn();
   $(".Signup").css("display","none");
   $(".ConfirmPage").css("display","none");
 });
@@ -29,7 +29,7 @@ $("#navSignUp").click(function(){
   $(this).css({"color":"white", "background-color": "#163B33"});
   $("#navLogin").css({"color":"gray" , "background-color":"#030807"});
   $(".Login").css("display","none");
-  $(".Signup").css("display","block");
+  $(".Signup").fadeIn();
   $(".ConfirmPage").css("display","none");
 });
 
@@ -131,7 +131,7 @@ $("#subSignUpBtn").click(function(){
     $("#password").css("background-color","#F8E0E0");
     $("#pw_warn").css("color","red");
   }
-  if(checkall[3] == 0 || !$("confirmpassword").val()){ //password is invalid
+  if(checkall[3] == 0){ //password is invalid
     $("#confirmpassword").css("background-color","#F8E0E0");
     $("#cpw_warn").css("color","red");
   }
