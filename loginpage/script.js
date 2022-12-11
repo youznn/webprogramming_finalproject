@@ -206,9 +206,12 @@ $("#subLoginBtn").click(function(){
   }
 
   else{ //login success.
-    $(".Login").css("display","none");
-    $(".ConfirmPage").css("display","block");
-    $("#confirmMessage").text("You are Logged in");
+    //$(".Login").css("display","none");
+    //$(".ConfirmPage").css("display","block");
+    //$("#confirmMessage").text("You are Logged in");
+    
+    $("#info_name").val($("#loginnickname").val());
+    location.href = "../mainpage/index.html";
   }
 });
 
