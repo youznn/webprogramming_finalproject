@@ -19,7 +19,7 @@ $(document).ready(function(){
 $("#navLogin").click(function(){
   $(this).css({"color":"white", "background-color": "#163B33"});
   $("#navSignUp").css({"color":"gray", "background-color":"#030807"});
-  $(".Login").css("display","block");
+  $(".Login").fadeIn();
   $(".Signup").css("display","none");
   $(".ConfirmPage").css("display","none");
 });
@@ -29,7 +29,7 @@ $("#navSignUp").click(function(){
   $(this).css({"color":"white", "background-color": "#163B33"});
   $("#navLogin").css({"color":"gray" , "background-color":"#030807"});
   $(".Login").css("display","none");
-  $(".Signup").css("display","block");
+  $(".Signup").fadeIn();
   $(".ConfirmPage").css("display","none");
 });
 
