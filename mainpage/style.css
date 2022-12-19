@@ -258,6 +258,7 @@ button:hover {
   border-color: #870A0A;
   border-radius: 50px;
   text-align: center;
+  opacity: 0.1;
 }
 
 .outboxWindow {
